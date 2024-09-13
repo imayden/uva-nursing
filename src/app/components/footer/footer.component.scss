@@ -138,7 +138,7 @@
 }
 
 .bottom-container {
-    height: 10vh;
+    height: 100%;
     width: 100vw;
     background-color: $secondary-color;
     display: flex;
@@ -181,6 +181,20 @@
             a:hover {
                 opacity: 1;
                 color: $hover-color;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            p {
+                text-align: center;
+            }
+
+            .link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
             }
         }
     }
