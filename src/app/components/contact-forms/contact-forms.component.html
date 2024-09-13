@@ -1,0 +1,68 @@
+<div class="body">
+    <div class="content">
+        <div class="title">
+            <h1>Let's Help You Find Your Fit</h1>
+            <p>
+                Complete the form to receive info and updates about your program of interest. We will not sell or share
+                your information.
+            </p>
+            <p>
+                For undergraduate program inquiries please visit the <a href="https://admission.virginia.edu/"
+                    target="_blank"> Office of Undergraduate Admission</a>, or email <a
+                    href="http://ans6n@virginia.edu/" target="_blank">Austin Stajduhar</a> .
+            </p>
+            <p>
+                Please note that submitting this form <strong>DOES NOT</strong> start an application for admission. To
+                start an application for graduate admission, please visit the application page <a
+                    href="https://applycentral.virginia.edu/apply/" target="_blank">here</a>.
+            </p>
+            <p class="note">
+                All fileds with * are required.
+            </p>
+
+        </div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="forms">
+
+            <input placeholder="&nbsp;&nbsp;&nbsp;First Name*" formControlName="firstName" />
+            <div class="error" *ngIf="contactForm.get('firstName')?.touched && contactForm.get('firstName')?.invalid">
+                *First Name is required!
+            </div>
+
+            <input placeholder="&nbsp;&nbsp;&nbsp;Last Name*" formControlName="lastName" />
+            <div class="error" *ngIf="contactForm.get('lastName')?.touched && contactForm.get('lastName')?.invalid">
+                *Last Name is required!
+            </div>
+
+            <input placeholder="&nbsp;&nbsp;&nbsp;Email Address*" type="email" formControlName="emailAddress" />
+            <div class="error" *ngIf="contactForm.get('emailAddress')?.touched && contactForm.get('emailAddress')?.invalid">
+                *Valid Email Address is required!
+            </div>
+
+
+            <input placeholder="&nbsp;&nbsp;&nbsp;Confirm Email Address*" type="email" formControlName="confirmEmailAddress" />
+            <div class="error" *ngIf="contactForm.get('confirmEmailAddress')?.touched && contactForm.get('confirmEmailAddress')?.invalid">
+                *Confirm Email Address is required!
+            </div>
+
+            <div class="error" *ngIf="contactForm.errors?.['notMatching'] && contactForm.get('confirmEmailAddress')?.touched">
+                *Email addresses do not match!
+            </div>
+
+            <!-- Drop down -->
+
+            <select formControlName="programOfInterest">
+                <option class="default" value="" disabled selected hidden>▾ Program of Interest*</option>
+                <option value="cnl-direct-entry">Clinical Nurse Leader (CNL) Direct Entry</option>
+                <option value="dnp">Doctor of Nursing Practice (DNP)</option>
+                <option value="phd-nursing">Doctor of Philosophy in Nursing (PhD)</option>
+                <option value="msn">Master of Science in Nursing (MSN)</option>
+                <option value="post-masters-certificate">Post Master's Certificate</option>
+            </select>
+
+
+            <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+
+        </form>
+    </div>
+
+</div>

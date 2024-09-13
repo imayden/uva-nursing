@@ -1,0 +1,176 @@
+<div class="body">
+    <div class="spacer">
+        <p>spacer</p>
+    </div>
+    <app-carousel-hero [carouselItems]="carouselItems"></app-carousel-hero>
+    <div class="home">
+        <div class="blocks">
+            <app-fade-in>
+                <div class="landing-options">
+                    <div class="slogan">
+                        <h1>Improving lives through nursing</h1>
+                        <p>We transform health through exceptional care, science, learning, and influence and are a
+                            learning community rooted in compassion and respect that values trust, equity, excellence,
+                            collaboration, and knowledge.</p>
+                        <a href="https://nursing.virginia.edu/academics/what-nursing-program-is-right-for-me/"
+                            target="_blank">
+                            What Nursing Program Is Right For Me?
+                        </a>
+                    </div>
+
+                    <div class="options">
+                        <a href="https://nursing.virginia.edu/uva-nursing-graduate-programs/" target="_blank">
+                            <span>
+                                Join Our Mailing List
+                            </span>
+                            <span class="arrow">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <a href="https://nursing.virginia.edu/admissions/tour_infosessions/" target="_blank">
+                            <span>
+                                Attend Virtual Info Session
+                            </span>
+                            <span class="arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://nursing.virginia.edu/admissions/apply/" target="_blank">
+                            <span>
+                                Apply
+                            </span>
+                            <span class="arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+
+                    </div>
+                </div>
+            </app-fade-in>
+        </div>
+
+        <div class="explore">
+            <div class="content">
+                <app-fade-in>
+                    <h1>Explore Programs</h1>
+                </app-fade-in>
+
+                <app-fade-in>
+                    <div class="programs">
+                        <div class="program" *ngFor="let program of constPrograms">
+                            <a [href]="program.link" target="_blank">
+                                <div class="program-img" [ngStyle]="{'background-image': 'url(' + program.img + ')'}">
+                                    <div class="overlay">
+                                        <h2>{{ program.title }}</h2>
+                                        <p>{{ program.text }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </app-fade-in>
+
+                <app-fade-in>
+                    <div class="sucess">
+                        <div class="number">
+                            <div class="title">
+                                <h4>#</h4>
+                                <h1 class="rank">1</h1>
+                            </div>
+
+                            <div class="disc">
+                                <p>Virginia's top-ranked nursing programs</p>
+                            </div>
+                        </div>
+                        <div class="number">
+                            <div class="title">
+                                <h4>$</h4>
+                                <h1>4.7M</h1>
+                            </div>
+
+                            <div class="disc">
+                                <p>in scholarships and aid in 2024</p>
+                            </div>
+                        </div>
+                        <div class="number">
+                            <div class="title">
+                                <h1 class="percentage">3</h1>
+                                <h4>%</h4>
+                            </div>
+
+                            <div class="disc">
+                                <p>In the top 3% of U.S. graduate nursing programs</p>
+                            </div>
+                        </div>
+                    </div>
+                </app-fade-in>
+
+                <app-fade-in>
+                    <app-contact-forms></app-contact-forms>
+                </app-fade-in>
+
+                <app-fade-in>
+                    <h1 style="margin-top: 6rem;">RSVP For Upcoming Admission Rooms</h1>
+                </app-fade-in>
+                <app-fade-in>
+                    <div class="admissionRooms">
+                        <div class="admissionRoom" *ngFor="let room of constAdmissionRooms">
+                            <a [href]="room.link" target="_blank">
+                                <div class="admissionRoom-img"
+                                    [ngStyle]="{'background-image': 'url(' + room.img + ')'}">
+                                    <div class="overlay">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </app-fade-in>
+
+            </div>
+        </div>
+
+        <div class="vid">
+
+            <div class="vid-content">
+                <app-fade-in>
+                    <video width="100%" height="auto" controls>
+                        <source src="https://nursing.virginia.edu/media/UVA-SON-Commercial-FINAL_1280x720.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </app-fade-in>
+            </div>
+        </div>
+
+        <div class="scholar">
+
+            <div class="scholar-content">
+                <app-fade-in>
+                    <h1>Meet Our Scientists and Scholars</h1>
+                </app-fade-in>
+                <app-fade-in>
+                    <div class="allScholars">
+                        
+                        <div class="scholar" *ngFor="let scholar of scholars">
+                            <a [href]="scholar.link" target="_blank">
+                                <div class="scholar-img"
+                                [ngStyle]="{'background-image': 'url(' + scholar.img + ')'}">
+                                    <div class="overlay">
+                                        <h2>{{ scholar.name }}, <br/><span style="opacity: 0.75;">{{ scholar.title }}</span></h2>
+                                        <!-- <p>{{ scholar.title }}</p> -->
+                                        <p class="scholar-disc">
+                                            {{scholar.disc}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    
+                    </div>
+                </app-fade-in>
+            </div>
+        </div>
+    </div>
+
+</div>

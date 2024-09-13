@@ -1,0 +1,67 @@
+<nav [class.sticky]="isSticky" [class.hidden]="isHidden">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="/">
+                <img *ngIf="screenWidth >= 991" src="https://nursing.virginia.edu/media/nursing_mngrm_v_rgb_ko.png">
+            </a>
+            <a href="/">
+                <img class="small-logo" *ngIf="screenWidth < 991" src="https://nursing.virginia.edu/media/uva-nursing-logo.png">
+            </a>
+        </div>
+
+        <!-- Desktop -->
+        <div class="nav-actions" *ngIf="screenWidth > 991">
+            <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+                <li>
+                    <a class="nav-menu">Academics ▾</a>
+                    <div class="dropdown">
+                        <a class="sub-menu" href="https://nursing.virginia.edu/academics/" target="_blank">Academics</a>
+                        <a class="sub-menu" href="https://nursing.virginia.edu/academics/phd-in-nursing/"
+                            target="_blank">PhD</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-menu">Admissions ▾</a>
+                    <div class="dropdown">
+                        <a class="sub-menu" href="https://nursing.virginia.edu/admissions/"
+                            target="_blank">Admissions</a>
+                        <a class="sub-menu" href="https://nursing.virginia.edu/admissions/apply/"
+                            target="_blank">Apply</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-menu">Research ▾</a>
+                    <div class="dropdown">
+                        <a class="sub-menu" href="https://nursing.virginia.edu/research/" target="_blank">Research</a>
+                        <a class="sub-menu" href="https://community.nursing.virginia.edu/onr/student-resources/"
+                            target="_blank">Student Research</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-menu">Alumni ▾</a>
+                    <div class="dropdown">
+                        <a class="sub-menu" href="https://nursing.virginia.edu/alumni/" target="_blank">Alumni</a>
+                        <a class="sub-menu" href="https://nursing.virginia.edu/alumni/alumni-events/"
+                            target="_blank">Alumni Events</a>
+                    </div>
+                </li>
+                <li><a href="https://nursing.virginia.edu/sonce/" target="_blank">Continuing Education</a></li>
+                <li>
+                    <a class="nav-menu">About ▾</a>
+                    <div class="dropdown">
+                        <a class="sub-menu" href="https://nursing.virginia.edu/about/" target="_blank">About</a>
+                        <a class="sub-menu" href="https://nursing.virginia.edu/about/leadership/"
+                            target="_blank">Leadership</a>
+                    </div>
+                </li>
+                <li><a href="https://nursing.virginia.edu/alumni/give/" target="_blank">Give</a></li>
+                <li><a href="https://search.nursing.virginia.edu/s/search.html?collection=virginia-school-of-nursing-collections&query=school+of+nursing" target="_blank">Search</a></li>
+            </ul>
+
+            <div class="burger-menu" *ngIf="screenWidth < 991">
+                <button (click)="toggleMobileMenu()"><span style="font-size: 2rem;">☰</span></button>
+            </div>
+        </div>
+        
+    </div>
+</nav>

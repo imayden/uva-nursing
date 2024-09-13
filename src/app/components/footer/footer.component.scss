@@ -1,0 +1,198 @@
+@import '../../../variable.scss';
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    p {
+        color: #fff;
+        line-height: 2rem;
+        font-weight: 300;
+        opacity: 0.8;
+    }
+
+    h4 {
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .footer {
+        width: $screen-width;
+        max-width: $max-width;
+        overflow: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        margin-block: 3rem;
+        padding-inline: 1rem;
+
+
+
+        .content {
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 1.5rem;
+
+            .mag-cover {
+                width: auto;
+                height: 25rem;
+            }
+
+            .logo {
+                width: auto;
+                height: 4rem;
+            }
+
+            @media screen and (max-width: 1440px) {
+                .mag-cover {
+                    width: auto;
+                    height: 18rem;
+                }
+
+                .logo {
+                    width: auto;
+                    height: 3.5rem;
+                }
+            }
+
+            @media screen and (max-width: 1180px) {
+                .mag-cover {
+                    width: auto;
+                    height: 15rem;
+                }
+
+                .logo {
+                    width: auto;
+                    height: 3rem;
+                }
+            }
+
+            .link {
+                font-size: 1rem;
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+                font-weight: 300;
+                max-width: 10rem;
+
+                &:hover {
+                    color: $hover-color;
+                    opacity: 1;
+                }
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+            }
+
+            .social-icons a {
+                color: #fff;
+                font-size: 24px;
+                text-decoration: none;
+            }
+
+            .social-icons a:hover {
+                color: $hover-color;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 991px) {
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            .content {
+                height: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+
+                .contact-info {
+                    text-align: center;
+                }
+
+                .link {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+.bottom-container {
+    height: 10vh;
+    width: 100vw;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    p,
+    a {
+        color: #fff;
+        line-height: 2rem;
+        // font-weight: 300;
+        opacity: 0.8;
+        text-decoration: none;
+    }
+
+    .bottom {
+        width: $screen-width;
+        max-width: $max-width;
+        overflow: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 1rem;
+
+        .link {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            gap: 1.5rem;
+
+            a {
+                cursor: pointer;
+            }
+
+            a:hover {
+                opacity: 1;
+                color: $hover-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+}

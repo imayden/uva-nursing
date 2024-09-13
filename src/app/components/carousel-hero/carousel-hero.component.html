@@ -1,0 +1,23 @@
+<div class="carousel-container">
+    <div *ngFor="let item of carouselItems; let i = index"
+         class="carousel-slide"
+         [ngClass]="{'active': isActiveSlide(i)}"
+         [ngStyle]="{'background-image': 'url(' + item.backgroundImage + ')'}"
+         >
+      
+      <div class="carousel-content" [ngStyle]="item.textPosition" >
+      <!-- <div class="carousel-content" > -->
+        <!-- (click)="navigateToLink(item.buttonLink)" -->
+        <h2 ><a style="text-decoration: none; color: #fff;" [href]="item.buttonLink" target="_blank">{{ item.title }}
+          <br/><br/><span class="c-button">{{ item.buttonText }}</span>
+        </a></h2>
+        
+      </div>
+     
+    </div>
+  
+    <!-- Navigate buttons -->
+    <button (click)="prevSlide()" class="carousel-control prev">‹</button>
+    <button (click)="nextSlide()" class="carousel-control next">›</button>
+  </div>
+  

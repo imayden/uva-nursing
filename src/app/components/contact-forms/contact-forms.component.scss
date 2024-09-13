@@ -1,0 +1,160 @@
+@import '../../../variable.scss';
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    p {
+        color: #fff;
+        opacity: 0.75;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .content {
+        color: #fff;
+        width: 100%;
+        max-width: 1440px;
+        padding: 2rem;
+        overflow: hidden;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        margin-top: 6rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+
+
+        .title {
+            width: 40%;
+            margin: 2rem;
+            box-sizing: border-box;
+
+            a {
+                color: #fff;
+            }
+
+            .note{
+                color: $hover-color;
+            }
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+
+            }
+        }
+
+
+        .forms {
+            width: 60%;
+            overflow: hidden;
+            margin: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            gap: 1.5rem;
+            box-sizing: border-box;
+
+            input,
+            button, select {
+                padding: 1.25rem;
+                font-size: 1.25rem;
+                border-radius: 999rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            button{
+                &:disabled {
+                    cursor: not-allowed;  /* 禁用状态时的鼠标样式 */
+                    opacity: 0.5;         /* 设置透明度为 0.5 */
+                    pointer-events: none; /* 禁用 hover 和点击事件 */
+                }
+            }
+
+            .error{
+                color: $hover-color;
+                width: 96%;
+                text-align: left;
+            }
+
+            input, select {
+                -webkit-appearance: none; /* Chrome, Safari, Opera */
+                -moz-appearance: none;    /* Firefox */
+                appearance: none;         /* Standard */
+                background: none;         /* 移除默认背景，包括箭头 */
+                background-color:rgba($color: #fff, $alpha: 0.1);;
+                border: none;
+                // border: 0.15rem solid rgba($color: #fff, $alpha: 0.25);
+                color: #fff;
+
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+
+            select:hover{
+                cursor:text;
+            }
+
+
+            button {
+                color: $primary-color;
+                background-color: $hover-color;
+                border: $button-border-secondary;
+                font-size: $button-font-size;
+                font-weight: $button-font-weight;
+                transition: $transition;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($color: #fff, $alpha: 0);
+                    color: $hover-color;
+                }
+
+                &:active {
+                    background-color: rgba($color: #fff, $alpha: 0);
+                    color: $hover-color;
+                    transform: $scale-lessen;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+
+            .title {
+                width: 100%;
+            }
+
+            .forms {
+                margin-top: 0;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 991px) {}
