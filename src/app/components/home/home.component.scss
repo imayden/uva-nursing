@@ -455,9 +455,24 @@
                 font-weight: $button-font-weight;
                 box-sizing: border-box;
 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
                 video {
                     border-radius: 1rem;
                     overflow: hidden;
+                }
+                
+
+                iframe {
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    height: auto;
+                    width: $screen-width;
+                    max-width: $max-width;
+                    aspect-ratio: 16/9;
                 }
             }
         }
